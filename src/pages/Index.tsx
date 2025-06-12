@@ -2,7 +2,7 @@ import { Star, ExternalLink, Instagram, ArrowRight, Sparkles, Palette, Code, Zap
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const Index = () => {
   const heroRef = useRef<HTMLElement>(null);
   const servicesRef = useRef<HTMLElement>(null);
@@ -148,7 +148,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <SpeedInsights/>
+=
       {/* Background Effects */}
       <div className="fixed inset-0 bg-gradient-to-br from-purple-900/5 via-black to-blue-900/5 pointer-events-none" />
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/10 via-black to-transparent pointer-events-none" />
