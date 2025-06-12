@@ -268,7 +268,7 @@ const Index = () => {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)]">
                       <service.icon className="w-8 h-8 text-purple-400" />
                     </div>
-                    <h3 className="text-2xl font-bold group-hover:text-purple-300 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
                       {service.title}
                     </h3>
                   </div>
@@ -412,10 +412,8 @@ const Index = () => {
 
       {/* Contact Section */}
       <section  id="contact" className="py-32 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-         
-         
-          <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-3xl p-12 border border-purple-500/20 shadow-[0_30px_80px_rgba(139,92,246,0.2)] backdrop-blur-sm hover:shadow-[0_40px_100px_rgba(139,92,246,0.3)] transition-all duration-700 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center flex justify-center align-center"> 
+          <div className="bg-gradient-to-br  from-purple-500/20 to-purple-600/10 rounded-3xl p-12 border border-purple-500/20 shadow-[0_30px_80px_rgba(139,92,246,0.2)] backdrop-blur-sm hover:shadow-[0_40px_100px_rgba(139,92,246,0.3)] transition-all duration-700 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600" />
             <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Get In Touch
@@ -423,13 +421,16 @@ const Index = () => {
             <p className="text-white text-xl md:text-2xl mb-8">
               Based in Macedonia, working with clients worldwide
             </p>
-            <a 
+            <div className="flex justify-center align-center">
+               <a 
               href="mailto:n.and.i.studio33@gmail.com" 
               className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-12 py-5 rounded-2xl transition-all duration-500 hover:scale-105 text-xl font-semibold shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.8)] border border-purple-500/20"
             >
               n.and.i.studio33@gmail.com
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
+            </div>
+           
           </div>
         </div>
       </section>
@@ -443,7 +444,7 @@ const Index = () => {
           </div>
           <div className="flex items-center space-x-6">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/nandi_studio25/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-4 rounded-2xl border border-white/10 text-gray-400 hover:text-purple-400 transition-all duration-500 hover:scale-110 hover:shadow-[0_0_30px_rgba(139,92,246,0.6)] backdrop-blur-sm"
