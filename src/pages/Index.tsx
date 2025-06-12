@@ -25,10 +25,10 @@ const Index = () => {
       });
     }, observerOptions);
 
-    const sections = [heroRef.current, servicesRef.current, workRef.current, reviewsRef.current, contactRef.current];
+    const sections = [heroRef.current, servicesRef.current, workRef.current, reviewsRef.current, ];
     sections.forEach((section) => {
       if (section) {
-        section.classList.add("opacity-0", "translate-y-12", "transition-all", "duration-1000", "ease-out");
+        section.classList.add("opacity-0", "translate-y-12", "transition-all", "duration-100", "ease-out");
         observer.observe(section);
       }
     });
@@ -43,42 +43,47 @@ const Index = () => {
   const projects = [
     {
       id: 1,
-      title: "Restaurant Branding",
+      title: "Digital Branding",
       description: "Complete visual identity for upscale dining experience with modern aesthetics",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
+      image: "/images/web1.jpg",
+      link:"https://digicraft.vercel.app/",
       category: "Branding",
       color: "from-orange-500/20 to-red-500/20"
     },
     {
       id: 2,
-      title: "E-commerce Design",
+      title: "Template Design",
       description: "Modern online store with seamless user experience and conversion optimization",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      image: "/images/web2.jpg",
+      link:"https://templateforge.vercel.app/",
       category: "Web Design",
       color: "from-blue-500/20 to-cyan-500/20"
     },
     {
       id: 3,
-      title: "Tech Startup Identity",
+      title: "Startup Identity",
       description: "Innovative branding for cutting-edge technology company with futuristic appeal",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+      image: "/images/web3.jpg",
       category: "Branding",
+      link:"https://elite-roofing-sigma.vercel.app/",
       color: "from-purple-500/20 to-pink-500/20"
     },
     {
       id: 4,
-      title: "Mobile App UI/UX",
+      title: "Web Design",
       description: "Intuitive interface design for productivity app with focus on user engagement",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop",
-      category: "App Design",
+      image: "/images/web4.jpg",
+      category: "3D Web Design",
+        link:"https://klackx.vercel.app/",
       color: "from-green-500/20 to-emerald-500/20"
     },
     {
       id: 5,
-      title: "Corporate Website",
+      title: "Web Design",
       description: "Professional web presence for consulting firm with sophisticated design language",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
-      category: "Web Design",
+      image: "/images/web4.jpg",
+      category: "3D Web Design",
+        link:"https://klackx.vercel.app/",
       color: "from-violet-500/20 to-purple-500/20"
     }
   ];
@@ -188,8 +193,11 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
+      
       <section ref={heroRef} id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="text-center max-w-5xl mx-auto relative">
+        
+        <div className="text-center sm:mt-[-200px] mb-[200px] max-w-5xl mx-auto relative">
+          
           <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
           <div className="relative z-10">
             <div className="flex items-center justify-center mb-8">
@@ -225,13 +233,16 @@ const Index = () => {
                 Get In Touch
               </Button>
             </div>
+            <iframe src='https://my.spline.design/abstractcosmicmotion-pMWXdO2CkZy2Xei2AiA9YdRs/' className=" absolute z-[-10] top-[400px]" width='100%' height='120%'></iframe>
           </div>
         </div>
+        
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} id="services" className="py-32 px-4 relative">
+      <section ref={servicesRef} id="services" className="py-32 mt-[100px] 0 px-4 relative">
         <div className="max-w-7xl mx-auto">
+          
           <div className="text-center mb-20">
             <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
               <span className="text-purple-300 font-semibold tracking-wide uppercase text-sm">Our Expertise</span>
@@ -284,6 +295,7 @@ const Index = () => {
 
       {/* Our Work Section */}
       <section ref={workRef} id="work" className="py-32 px-4 relative">
+        <iframe src='https://my.spline.design/glowingplanetparticles-FhRg3WhZ3DyRQT1tYyogr6yJ/' className="absolute sm:left-[15%] sm:mt-[150px] mt-[-1000px] sm:w-[70%] sm:h-[50%] w-[100%] h-[100%]" width='70%' height='50%'></iframe>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
@@ -315,7 +327,8 @@ const Index = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center z-20">
                       <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                        <ExternalLink className="text-white w-6 h-6" />
+                        <a href={project.link} target="_blank"><ExternalLink className="text-white w-6 h-6" /></a>
+        
                       </div>
                     </div>
                   </div>
@@ -325,7 +338,7 @@ const Index = () => {
                         {project.category}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                    <h3 className="text-2xl text-white font-bold mb-4 group-hover:text-purple-300 transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
@@ -398,18 +411,10 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactRef} id="contact" className="py-32 px-4">
+      <section  id="contact" className="py-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-            <span className="text-purple-300 font-semibold tracking-wide uppercase text-sm">Let's Connect</span>
-          </div>
-          <h2 className="text-6xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-            Let's Work Together
-          </h2>
-          <p className="text-2xl md:text-3xl text-white mb-12 leading-relaxed">
-            Ready to transform your brand with custom design solutions? 
-            <span className="text-purple-300"> Let's create something extraordinary.</span>
-          </p>
+         
+         
           <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-3xl p-12 border border-purple-500/20 shadow-[0_30px_80px_rgba(139,92,246,0.2)] backdrop-blur-sm hover:shadow-[0_40px_100px_rgba(139,92,246,0.3)] transition-all duration-700 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600" />
             <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -433,7 +438,7 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-white/10 bg-gradient-to-b from-transparent to-black/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <p className="text-gray-400 text-lg">© 2024 N&I Studio. All rights reserved.</p>
+            <p className="text-gray-400 text-lg">© 2025 N&I Studio. All rights reserved.</p>
             <p className="text-gray-500 text-sm mt-1">Crafting extraordinary digital experiences</p>
           </div>
           <div className="flex items-center space-x-6">
