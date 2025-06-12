@@ -436,7 +436,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-white/10 bg-gradient-to-b from-transparent to-black/50 backdrop-blur-sm">
+      <footer className="py-12 px-4 border-t-2 border-white/10 bg-gradient-to-b from-transparent to-black/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <p className="text-gray-400 text-lg">© 2025 N&I Studio. All rights reserved.</p>
