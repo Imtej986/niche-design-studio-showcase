@@ -1,11 +1,11 @@
-
-import { Star, ExternalLink, Instagram, ArrowRight, Sparkles } from "lucide-react";
+import { Star, ExternalLink, Instagram, ArrowRight, Sparkles, Palette, Code, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 
 const Index = () => {
   const heroRef = useRef<HTMLElement>(null);
+  const servicesRef = useRef<HTMLElement>(null);
   const workRef = useRef<HTMLElement>(null);
   const reviewsRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
@@ -25,7 +25,7 @@ const Index = () => {
       });
     }, observerOptions);
 
-    const sections = [heroRef.current, workRef.current, reviewsRef.current, contactRef.current];
+    const sections = [heroRef.current, servicesRef.current, workRef.current, reviewsRef.current, contactRef.current];
     sections.forEach((section) => {
       if (section) {
         section.classList.add("opacity-0", "translate-y-12", "transition-all", "duration-1000", "ease-out");
@@ -80,6 +80,33 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
       category: "Web Design",
       color: "from-violet-500/20 to-purple-500/20"
+    }
+  ];
+
+  const services = [
+    {
+      icon: Palette,
+      title: "Brand Identity",
+      description: "Complete visual identity systems including logos, color palettes, and brand guidelines that resonate with your target audience.",
+      features: ["Logo Design", "Brand Guidelines", "Color Systems", "Typography"]
+    },
+    {
+      icon: Code,
+      title: "Web Development",
+      description: "Modern, responsive websites and web applications built with cutting-edge technologies for optimal performance.",
+      features: ["React Development", "Responsive Design", "Performance Optimization", "SEO Ready"]
+    },
+    {
+      icon: Zap,
+      title: "UI/UX Design",
+      description: "User-centered design approach creating intuitive interfaces that drive engagement and conversions.",
+      features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"]
+    },
+    {
+      icon: Users,
+      title: "Consulting",
+      description: "Strategic design consulting to help your business make informed decisions about your digital presence.",
+      features: ["Design Strategy", "Brand Positioning", "Market Analysis", "Growth Planning"]
     }
   ];
 
@@ -140,6 +167,7 @@ const Index = () => {
             <div className="hidden md:flex space-x-8">
               {[
                 { name: "Home", id: "home" },
+                { name: "Services", id: "services" },
                 { name: "Our Work", id: "work" },
                 { name: "Reviews", id: "reviews" },
                 { name: "Contact", id: "contact" }
@@ -201,10 +229,58 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Separator */}
-      <div className="h-40 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-      </div>
+      {/* Services Section */}
+      <section ref={servicesRef} id="services" className="py-32 px-4 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+              <span className="text-purple-300 font-semibold tracking-wide uppercase text-sm">Our Expertise</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              Services
+            </h2>
+            <p className="text-xl text-gray-400/90 max-w-3xl mx-auto leading-relaxed">
+              We offer comprehensive design and development services to elevate your brand 
+              and create exceptional digital experiences.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <Card 
+                key={index} 
+                className="group bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-700 cursor-pointer hover:scale-105 shadow-[0_20px_60px_rgba(139,92,246,0.15)] hover:shadow-[0_30px_80px_rgba(139,92,246,0.3)] backdrop-blur-sm overflow-hidden"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)]">
+                      <service.icon className="w-8 h-8 text-purple-400" />
+                    </div>
+                    <h3 className="text-2xl font-bold group-hover:text-purple-300 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed mb-6 text-lg">
+                    {service.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <div 
+                        key={featureIndex}
+                        className="flex items-center text-purple-300 text-sm font-medium"
+                      >
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Our Work Section */}
       <section ref={workRef} id="work" className="py-32 px-4 relative">
@@ -262,11 +338,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Enhanced Separator */}
-      <div className="h-32 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-      </div>
 
       {/* Reviews Section */}
       <section ref={reviewsRef} id="reviews" className="py-32 px-4 relative">
@@ -326,11 +397,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Separator */}
-      <div className="h-32 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-      </div>
-
       {/* Contact Section */}
       <section ref={contactRef} id="contact" className="py-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -362,9 +428,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Enhanced Separator */}
-      <div className="h-20 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-white/10 bg-gradient-to-b from-transparent to-black/50 backdrop-blur-sm">
