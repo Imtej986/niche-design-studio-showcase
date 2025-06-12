@@ -334,27 +334,27 @@ const Index = () => {
       {/* Contact Section */}
       <section ref={contactRef} id="contact" className="py-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 mb-8">
-            <span className="text-green-300 font-semibold tracking-wide uppercase text-sm">Let's Connect</span>
+          <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+            <span className="text-purple-300 font-semibold tracking-wide uppercase text-sm">Let's Connect</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">
+          <h2 className="text-6xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-400/90 mb-12 leading-relaxed">
+          <p className="text-2xl md:text-3xl text-white mb-12 leading-relaxed">
             Ready to transform your brand with custom design solutions? 
             <span className="text-purple-300"> Let's create something extraordinary.</span>
           </p>
-          <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-12 border border-white/10 shadow-[0_30px_80px_rgba(139,92,246,0.2)] backdrop-blur-sm hover:shadow-[0_40px_100px_rgba(139,92,246,0.3)] transition-all duration-700 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-green-500" />
-            <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-3xl p-12 border border-purple-500/20 shadow-[0_30px_80px_rgba(139,92,246,0.2)] backdrop-blur-sm hover:shadow-[0_40px_100px_rgba(139,92,246,0.3)] transition-all duration-700 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600" />
+            <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Get In Touch
             </h3>
-            <p className="text-gray-400 mb-8 text-lg">
+            <p className="text-white text-xl md:text-2xl mb-8">
               Based in Macedonia, working with clients worldwide
             </p>
             <a 
               href="mailto:n.and.i.studio33@gmail.com" 
-              className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-5 rounded-2xl transition-all duration-500 hover:scale-105 text-xl font-semibold shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.8)] border border-white/10"
+              className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-12 py-5 rounded-2xl transition-all duration-500 hover:scale-105 text-xl font-semibold shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.8)] border border-purple-500/20"
             >
               n.and.i.studio33@gmail.com
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
